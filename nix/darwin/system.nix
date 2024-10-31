@@ -16,11 +16,16 @@
           "${pkgs.slack}/Applications/slack.app"
           "/System/Applications/Messages.app/"
         ];
+        persistent-others = [ ];
+        show-recents = false;
       };
       finder = {
         AppleShowAllExtensions = true;
         FXPreferredViewStyle = "Nlsv";
+        CreateDesktop = false;
+        ShowPathbar = true;
       };
+      loginwindow = { GuestEnabled = false; };
       screencapture.location = "~/Pictures/screenshots";
     };
 
