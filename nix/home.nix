@@ -35,7 +35,10 @@
       initExtra = ''
         eval "$(/opt/homebrew/bin/brew shellenv)"
       '';
-      shellAliases = { z = "cd"; };
+      shellAliases = {
+        nix-update = "nix flake update --flake ~/.config/nix";
+        nix-switch = "darwin-rebuild switch --flake ~/.config/nix#air";
+      };
     };
 
     starship = {
