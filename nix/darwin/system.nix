@@ -16,6 +16,7 @@
           "${pkgs.slack}/Applications/slack.app"
           "/System/Applications/Messages.app/"
           "${pkgs.iterm2}/Applications/iterm2.app"
+          "${pkgs.todoist}/Applications/Todoist.app"
         ];
         persistent-others = [ ];
         show-recents = false;

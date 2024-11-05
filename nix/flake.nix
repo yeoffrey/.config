@@ -45,6 +45,7 @@
           pkgs.rust-analyzer
           pkgs.nixfmt-classic
           pkgs.magic-wormhole-rs
+          pkgs.terraform
         ];
 
         # home-manager

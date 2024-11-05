@@ -9,6 +9,13 @@
       cleanup = "zap";
     };
 
-    casks = [ "raycast" "1password" "1password-cli" "notion" ];
+    casks = [
+      "raycast"
+      "1password"
+      "1password-cli"
+      "notion"
+      "todoist"
+      "scroll-reverser"
+    ];
   };
 }
