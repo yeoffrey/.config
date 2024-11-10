@@ -26,26 +26,26 @@
           config.allowUnfree = true;
         };
 
-        environment.systemPackages = [
-          pkgs.fd
-          pkgs.ripgrep
-          pkgs.tmux
-          pkgs.neovim
-          pkgs.iterm2
+        environment.systemPackages = with pkgs; [
+          fd
+          ripgrep
+          tmux
+          neovim
+          iterm2
 
           # Tooling
-          pkgs.lazygit
+          lazygit
 
           # Lang
-          pkgs.nodejs_20
-          pkgs.go
-          pkgs.cargo
-          pkgs.poetry
-          pkgs.pyenv
-          pkgs.rust-analyzer
-          pkgs.nixfmt-classic
-          pkgs.magic-wormhole-rs
-          pkgs.terraform
+          nodejs_20
+          go
+          cargo
+          poetry
+          pyenv
+          rust-analyzer
+          nixfmt-classic
+          magic-wormhole-rs
+          terraform
         ];
 
         # home-manager

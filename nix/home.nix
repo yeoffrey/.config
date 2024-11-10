@@ -20,7 +20,7 @@
 
     sessionVariables = { EDITOR = "nvim"; };
 
-    packages = [ pkgs.zoxide ];
+    packages = [ ];
   };
 
   # Let Home Manager install and manage itself.
@@ -33,6 +33,8 @@
       autosuggestion = { enable = true; };
       syntaxHighlighting.enable = true;
       initExtra = ''
+        export PATH="/Users/geoff/google-cloud-sdk/bin:$PATH"
+
         eval "$(/opt/homebrew/bin/brew shellenv)"
       '';
       shellAliases = {
