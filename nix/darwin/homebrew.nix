@@ -16,6 +16,7 @@
       "notion"
       "todoist"
       "scroll-reverser"
+      "figma"
     ];
   };
 }
