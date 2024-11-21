@@ -17,6 +17,8 @@
       "todoist"
       "scroll-reverser"
       "figma"
+      "postman"
+      "spotify"
     ];
   };
 }

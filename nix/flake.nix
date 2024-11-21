@@ -27,6 +27,7 @@
         };
 
         environment.systemPackages = with pkgs; [
+          wget
           fd
           ripgrep
           tmux
@@ -46,6 +47,10 @@
           nixfmt-classic
           magic-wormhole-rs
           terraform
+          deno
+
+          obsidian
+          vscode
         ];
 
         # home-manager
