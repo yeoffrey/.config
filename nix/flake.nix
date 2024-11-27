@@ -1,22 +1,27 @@
 {
-  description = "Geoff Darwin system flake";
+  description = "Nix-darwin configurations for my machines";
 
   inputs = {
+    # Nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    nix-darwin.url = "github:LnL7/nix-darwin";
-
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-
+    # Home manager
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Nix-darwin (flakes for MacOS machines)
+    darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Homebrew
+    homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
+  outputs = inputs@{ self, nixpkgs, home-manager, darwin, homebrew }:
     let
       configuration = { pkgs, ... }: {
         nixpkgs = {
@@ -51,6 +56,7 @@
 
           obsidian
           vscode
+          slack
         ];
 
         # home-manager
@@ -77,7 +83,7 @@
         security.pam.enableSudoTouchIdAuth = true;
       };
     in {
-      darwinConfigurations."air" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."air" = darwin.lib.darwinSystem {
         modules = [
           configuration
           home-manager.darwinModules.home-manager
@@ -88,7 +94,7 @@
               users.geoff = import ./home.nix;
             };
           }
-          nix-homebrew.darwinModules.nix-homebrew
+          homebrew.darwinModules.nix-homebrew
           ./darwin/homebrew.nix
           ./darwin/system.nix
         ];
