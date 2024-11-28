@@ -10,4 +10,6 @@ config.window_decorations = "RESIZE"
 
 config.color_scheme = "Tokyo Night Moon"
 
+config.max_fps = 144
+
 return config
