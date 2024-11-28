@@ -19,6 +19,7 @@
       "figma"
       "postman"
       "spotify"
+      "wezterm"
     ];
   };
 }

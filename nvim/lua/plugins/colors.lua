@@ -1,17 +1,6 @@
 return {
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    opts = {
-      flavour = "mocha",
-    },
-  },
-  -- Configure LazyVim to load Catppuccin
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
+  "folke/tokyonight.nvim",
+  opts = {
+    transparent = true, -- Enable this to disable setting the background color
   },
 }
