@@ -21,82 +21,32 @@
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, darwin, homebrew }:
+  outputs = { self, nixpkgs, home-manager, darwin, homebrew }@inputs:
     let
-      configuration = { pkgs, ... }: {
-        nixpkgs = {
-          # The platform the configuration will be used on.
-          hostPlatform = "aarch64-darwin";
-          # Allow non-opensource packages
-          config.allowUnfree = true;
+      # Function for nix-darwin system configuration
+      mkDarwinConfiguration = hostname: username:
+        darwin.lib.darwinSystem {
+          modules = [
+            home-manager.darwinModules.home-manager
+            homebrew.darwinModules.nix-homebrew
+            ./hosts/${hostname}/configuration.nix
+            ./users/${username}.nix
+          ];
         };
-
-        environment.systemPackages = with pkgs; [
-          wget
-          fd
-          ripgrep
-          tmux
-          neovim
-          iterm2
-
-          # Tooling
-          lazygit
-
-          # Lang
-          nodejs_20
-          go
-          cargo
-          poetry
-          pyenv
-          rust-analyzer
-          nixfmt-classic
-          magic-wormhole-rs
-          terraform
-          deno
-
-          obsidian
-          vscode
-          slack
-        ];
-
-        # home-manager
-        users.users.geoff.home = "/Users/geoff";
-        home-manager.backupFileExtension = "backup";
-
-        # Necessary for using flakes on this system.
-        nix = {
-          settings.experimental-features = "nix-command flakes";
-          configureBuildUsers = true;
-          useDaemon = true;
-        };
-
-        # Fonts
-        fonts.packages =
-          [ (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
-
-        programs.zsh.enable = true;
-
-        # Auto upgrade nix package and the daemon service.
-        services.nix-daemon.enable = true;
-        # nix.package = pkgs.nix;
-
-        security.pam.enableSudoTouchIdAuth = true;
-      };
     in {
       darwinConfigurations."air" = darwin.lib.darwinSystem {
         modules = [
-          configuration
           home-manager.darwinModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.geoff = import ./home.nix;
+              users.geoff = import ./users/geoff.nix;
             };
           }
+          home-manager.darwinModules.home-manager
           homebrew.darwinModules.nix-homebrew
-          ./darwin/homebrew.nix
-          ./darwin/system.nix
+          ./hosts/air/configuration.nix
         ];
       };
 
