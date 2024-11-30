@@ -12,4 +12,7 @@ config.color_scheme = "Tokyo Night Moon"
 
 config.max_fps = 144
 
+-- Temp fix for Wezterm on nixpkgs
+config.front_end = "WebGpu"
+
 return config

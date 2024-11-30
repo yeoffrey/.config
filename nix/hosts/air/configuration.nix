@@ -69,7 +69,6 @@
     ripgrep
     tmux
     neovim
-    iterm2
     gh
     nodejs_20
     go
@@ -86,6 +85,7 @@
     slack
     spotify
     postman
+    wezterm
   ];
 
   # Fonts
@@ -104,7 +104,6 @@
       "todoist"
       "scroll-reverser"
       "figma"
-      "wezterm"
     ];
     taps = [ ];
     onActivation.cleanup = "zap";
