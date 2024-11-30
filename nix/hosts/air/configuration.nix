@@ -84,6 +84,8 @@
     obsidian
     vscode
     slack
+    spotify
+    postman
   ];
 
   # Fonts
@@ -102,8 +104,6 @@
       "todoist"
       "scroll-reverser"
       "figma"
-      "postman"
-      "spotify"
       "wezterm"
     ];
     taps = [ ];
