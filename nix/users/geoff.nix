@@ -1,4 +1,4 @@
-{ userConfig }:
+{ userConfig, pkgs }:
 
 {
   home = {
@@ -20,7 +20,7 @@
 
     sessionVariables = { EDITOR = "nvim"; };
 
-    packages = [ ];
+    packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
   };
 
   # Let Home Manager install and manage itself.

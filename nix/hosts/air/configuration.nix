@@ -88,10 +88,6 @@
     wezterm
   ];
 
-  # Fonts
-  fonts.packages =
-    [ (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
-
   programs.zsh.enable = true;
 
   homebrew = {
