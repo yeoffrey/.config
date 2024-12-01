@@ -76,6 +76,7 @@
     poetry
     pyenv
     rust-analyzer
+    rustc
     nixfmt-classic
     magic-wormhole-rs
     terraform
