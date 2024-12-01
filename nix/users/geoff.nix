@@ -20,7 +20,7 @@
 
     sessionVariables = { EDITOR = "nvim"; };
 
-    packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
+    packages = [ ];
   };
 
   # Let Home Manager install and manage itself.
