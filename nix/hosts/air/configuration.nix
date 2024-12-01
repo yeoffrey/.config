@@ -73,6 +73,7 @@
     nodejs_20
     go
     cargo
+    rustfmt
     poetry
     pyenv
     rust-analyzer

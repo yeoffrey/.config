@@ -15,6 +15,7 @@ return {
       formatters_by_ft = {
         ts = { "biome" },
         json = { "biome" },
+        rs = { "rustfmt" },
       },
       formatters = {
         biome = {
