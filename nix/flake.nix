@@ -44,18 +44,26 @@
           };
           modules = [
             home-manager.darwinModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.geoff = import ./users/${username}.nix;
-              };
-            }
             homebrew.darwinModules.nix-homebrew
             ./hosts/${hostname}/configuration.nix
           ];
         };
+
+      # Function for Home Manager configuration
+      mkHomeConfiguration = system: username: hostname:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs { inherit system; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+            userConfig = users.${username};
+          };
+          modules = [ ./users/${username}.nix ];
+        };
     in {
       darwinConfigurations = { "air" = mkDarwinConfiguration "air" "geoff"; };
+
+      homeConfigurations = {
+        "geoff@air" = mkHomeConfiguration "aarch64-darwin" "geoff" "air";
+      };
     };
 }

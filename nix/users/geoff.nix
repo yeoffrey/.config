@@ -1,12 +1,12 @@
-{ pkgs, ... }:
+{ userConfig }:
 
 {
   home = {
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
-    username = "geoff";
+    username = "${userConfig.name}";
 
-    homeDirectory = "/Users/geoff";
+    homeDirectory = "/Users/${userConfig.name}";
 
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage
@@ -34,13 +34,14 @@
       autosuggestion = { enable = true; };
       syntaxHighlighting.enable = true;
       initExtra = ''
-        export PATH="/Users/geoff/google-cloud-sdk/bin:$PATH"
+        export PATH="/Users/${userConfig.name}/google-cloud-sdk/bin:$PATH"
 
         eval "$(/opt/homebrew/bin/brew shellenv)"
       '';
       shellAliases = {
         nix-update = "nix flake update --flake ~/.config/nix";
-        nix-switch = "darwin-rebuild switch --flake ~/.config/nix#air";
+        nix-switch =
+          "darwin-rebuild switch --flake ~/.config/nix#air && home-manager switch --flake ~/.config/nix#geoff@air";
       };
     };
 
@@ -61,8 +62,8 @@
 
     git = {
       enable = true;
-      userName = "Geoffrey Belcher";
-      userEmail = "geoffreybelcher@icloud.com";
+      userName = "${userConfig.fullName}";
+      userEmail = "${userConfig.email}";
     };
   };
 }
