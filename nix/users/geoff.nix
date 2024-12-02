@@ -55,11 +55,6 @@
       nix-direnv.enable = true;
     };
 
-    zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
     git = {
       enable = true;
       userName = "${userConfig.fullName}";
