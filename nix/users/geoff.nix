@@ -43,6 +43,7 @@
         nix-update = "nix flake update --flake ~/.config/nix";
         nix-switch =
           "darwin-rebuild switch --flake ~/.config/nix#air && home-manager switch --flake ~/.config/nix#geoff@air";
+        nix-clean = "nix-collect-garbage -d";
       };
     };
 
