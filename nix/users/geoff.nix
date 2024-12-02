@@ -64,6 +64,10 @@
       enable = true;
       userName = "${userConfig.fullName}";
       userEmail = "${userConfig.email}";
+      includes = [{
+        condition = "gitdir:~/work/oceansync/**";
+        contents = { user.email = "geoff@oceansync.com"; };
+      }];
     };
   };
 }
