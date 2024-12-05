@@ -32,6 +32,7 @@
           "${pkgs.arc-browser}/Applications/arc.app"
           "/System/Applications/Messages.app"
         ];
+        tilesize = 64;
       };
       finder = {
         AppleShowAllFiles = true;
