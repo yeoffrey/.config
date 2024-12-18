@@ -31,6 +31,8 @@
         persistent-apps = [
           "${pkgs.arc-browser}/Applications/arc.app"
           "/System/Applications/Messages.app"
+          "${pkgs.obsidian}/Applications/obsidian.app"
+          "${pkgs.wezterm}/Applications/wezterm.app"
         ];
         tilesize = 64;
       };
@@ -67,6 +69,7 @@
   environment.systemPackages = with pkgs; [
     wget
     fd
+    fzf
     ripgrep
     tmux
     neovim
