@@ -66,5 +66,7 @@
         contents = { user.email = "geoff@oceansync.com"; };
       }];
     };
+
+    yazi.enable = true;
   };
 }
