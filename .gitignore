@@ -3,6 +3,7 @@ gh
 iterm2
 direnv
 op
+github-copilot
 
 .DS_Store
 gcloud
