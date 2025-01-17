@@ -67,6 +67,7 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
+    cargo-watch
     wget
     fd
     fzf
@@ -97,6 +98,7 @@
     jq
     poppler
     zotero
+    diesel-cli
   ];
 
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
