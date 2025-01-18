@@ -99,6 +99,7 @@
     poppler
     zotero
     diesel-cli
+    postgresql
   ];
 
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
