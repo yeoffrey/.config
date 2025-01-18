@@ -100,6 +100,7 @@
     zotero
     diesel-cli
     postgresql
+    whatsapp-for-mac
   ];
 
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
