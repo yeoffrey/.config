@@ -3,6 +3,7 @@ gh
 direnv
 op
 github-copilot
+git
 
 .DS_Store
 gcloud
