@@ -5,15 +5,29 @@ CONFIG_DIR="$HOME/.config"
 ZSHRC_SOURCE="$CONFIG_DIR/.zshrc"
 ZSHRC_TARGET="$HOME/.zshrc"
 
-# Create a symlink for .zshrc
+TMUX_SOURCE="$CONFIG_DIR/.tmux.conf"
+TMUX_TARGET="$HOME/.tmux.conf"
+
+# Remove existing .zshrc file
 if [ -e "$ZSHRC_TARGET" ]; then
   echo "Removing existing .zshrc file in home directory."
   rm "$ZSHRC_TARGET"
 fi
 
+# Remove existing .tmux.conf file
+if [ -e "$TMUX_TARGET" ]; then
+  echo "Removing existing .tmux.conf file in home directory."
+  rm "$TMUX_TARGET"
+fi
+
+# Create symlinks for .zshrc and .tmux.conf
 echo "Creating symlink for .zshrc..."
 ln -s "$ZSHRC_SOURCE" "$ZSHRC_TARGET"
 echo ".zshrc symlink created successfully."
+
+echo "Creating symlink for .tmux.conf..."
+ln -s "$TMUX_SOURCE" "$TMUX_TARGET"
+echo ".tmux.conf symlink created successfully."
 
 # Install Homebrew if it's not already installed
 if ! command -v brew &>/dev/null; then
@@ -83,3 +97,5 @@ if [ $INSTALLED_COUNT -eq 0 ] && [ $CASK_INSTALLED_COUNT -eq 0 ]; then
 else
   echo "Installed $INSTALLED_COUNT command line packages and $CASK_INSTALLED_COUNT applications/fonts successfully."
 fi
+
+echo "Please restart your shell to apply the changes."
