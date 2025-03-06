@@ -49,6 +49,7 @@ PACKAGES=(
   "lazygit"
   "neovim"
   "node@22"
+  "oven-sh/bun/bun"
   "ripgrep"
   "starship"
   "supabase/tap/supabase"
@@ -97,5 +98,7 @@ if [ $INSTALLED_COUNT -eq 0 ] && [ $CASK_INSTALLED_COUNT -eq 0 ]; then
 else
   echo "Installed $INSTALLED_COUNT command line packages and $CASK_INSTALLED_COUNT applications/fonts successfully."
 fi
+
+brew cleanup
 
 echo "Please restart your shell to apply the changes."
