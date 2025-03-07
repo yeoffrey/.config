@@ -78,6 +78,7 @@ CASKS=(
   "1password"
   "font-jetbrains-mono-nerd-font"
   "openphone"
+  "slack"
   "todoist"
   "wezterm"
 )
