@@ -77,6 +77,7 @@ fi
 CASKS=(
   "1password"
   "font-jetbrains-mono-nerd-font"
+  "notion"
   "openphone"
   "slack"
   "tidal"
