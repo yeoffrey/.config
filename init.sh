@@ -79,6 +79,7 @@ CASKS=(
   "font-jetbrains-mono-nerd-font"
   "openphone"
   "slack"
+  "tidal"
   "todoist"
   "wezterm"
 )
