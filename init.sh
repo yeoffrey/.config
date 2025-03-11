@@ -48,6 +48,7 @@ PACKAGES=(
   "neovim"
   "node@22"
   "oven-sh/bun/bun"
+  "pnpm"
   "ripgrep"
   "starship"
   "supabase/tap/supabase"
