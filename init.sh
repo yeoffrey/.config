@@ -42,6 +42,7 @@ brew update
 # Install command line packages
 PACKAGES=(
   "eza"
+  "figma"
   "fzf"
   "gh"
   "lazygit"
