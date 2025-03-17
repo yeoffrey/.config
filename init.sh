@@ -78,6 +78,7 @@ fi
 # Install fonts and applications using Homebrew Cask
 CASKS=(
   "1password"
+  "arc"
   "font-jetbrains-mono-nerd-font"
   "notion"
   "openphone"
