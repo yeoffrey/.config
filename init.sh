@@ -45,6 +45,7 @@ PACKAGES=(
   "figma"
   "fzf"
   "gh"
+  "hashicorp/tap/terraform"
   "lazygit"
   "neovim"
   "node@22"
