@@ -81,6 +81,7 @@ CASKS=(
   "1password"
   "arc"
   "font-jetbrains-mono-nerd-font"
+  "google-cloud-sdk"
   "logitech-options"
   "notion"
   "openphone"
