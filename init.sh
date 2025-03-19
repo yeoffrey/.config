@@ -85,6 +85,7 @@ CASKS=(
   "logitech-options"
   "notion"
   "openphone"
+  "postman"
   "slack"
   "tidal"
   "todoist"
