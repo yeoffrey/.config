@@ -112,3 +112,5 @@ fi
 brew cleanup
 
 echo "Please restart your shell to apply the changes."
+
+echo "Done!"
