@@ -47,6 +47,7 @@ PACKAGES=(
   "gh"
   "hashicorp/tap/terraform"
   "lazygit"
+  "luarocks"
   "neovim"
   "node@22"
   "oven-sh/bun/bun"
