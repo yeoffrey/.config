@@ -7,3 +7,4 @@ git
 
 .DS_Store
 gcloud
+nvim/lazy-lock.json
