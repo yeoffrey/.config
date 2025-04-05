@@ -55,6 +55,7 @@ PACKAGES=(
   "starship"
   "supabase/tap/supabase"
   "tmux"
+  "vercel-cli"
   "zoxide"
   "zsh-autosuggestions"
   "zsh-syntax-highlighting"
