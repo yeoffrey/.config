@@ -45,6 +45,7 @@ PACKAGES=(
   "figma"
   "fzf"
   "gh"
+  "go"
   "hashicorp/tap/terraform"
   "lazygit"
   "luarocks"
