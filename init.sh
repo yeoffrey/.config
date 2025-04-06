@@ -41,6 +41,7 @@ brew update
 
 # Install command line packages
 PACKAGES=(
+  "cargo-binstall"
   "eza"
   "figma"
   "fzf"
