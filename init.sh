@@ -84,6 +84,7 @@ fi
 CASKS=(
   "1password"
   "arc"
+  "cursor"
   "font-jetbrains-mono-nerd-font"
   "google-cloud-sdk"
   "logitech-options"
