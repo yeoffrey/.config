@@ -1,0 +1,8 @@
+macos-titlebar-style = hidden
+
+theme = tokyonight_moon
+
+shell-integration = zsh
+
+window-padding-x = 8
+window-padding-y = 8
