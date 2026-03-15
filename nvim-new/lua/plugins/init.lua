@@ -1,4 +1,5 @@
 require("plugins.ai")
+require("plugins.flash")
 require("plugins.formatting")
 require("plugins.lspconfig")
 require("plugins.snacks")

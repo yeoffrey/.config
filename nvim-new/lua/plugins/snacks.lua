@@ -163,11 +163,8 @@ vim.api.nvim_create_autocmd("User", {
 })
 
 -- stylua: ignore start
-local   keymaps = {
-    { "<leader>l", function() vim.cmd("Lazy") end, desc = "Open Lazy tab", },
+local keymaps = {
     -- Top Pickers & Explorer
-    { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
-    { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
     { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
     { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
