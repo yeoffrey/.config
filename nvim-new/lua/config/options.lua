@@ -3,6 +3,7 @@ g.mapleader = " "
 g.maplocalleader = " "
 
 local o = vim.opt
+o.clipboard = vim.env.SSH_CONNECTION and "" or "unnamedplus" -- Sync with system clipboard
 o.confirm = true -- Confirm to save changes before exiting modified buffer
 o.cursorline = true -- Enable highlighting of the current line
 o.expandtab = true -- Use spaces instead of tabso.ignorecase = true -- When searching, don't care about casing

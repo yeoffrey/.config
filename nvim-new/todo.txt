@@ -2,8 +2,6 @@
 - ctrl + hjkl for navigating between panes
 
 Plugins I'd like to add explore:
-- Hard mode
 - Gitsigns
-- Treesitter
 - nvim-cmp for autocompletion
 - Copilot

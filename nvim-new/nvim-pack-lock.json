@@ -40,6 +40,10 @@
       "rev": "9990c41f10f54f29a888d13024c9f765037bde23",
       "src": "https://www.github.com/echasnovski/mini.nvim"
     },
+    "mini.pairs": {
+      "rev": "b7fde3719340946feb75017ef9d75edebdeb0566",
+      "src": "https://github.com/nvim-mini/mini.pairs"
+    },
     "neo-tree.nvim": {
       "rev": "4597f1e0b928a78d5fe1b3d33d1a5141453ba839",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
