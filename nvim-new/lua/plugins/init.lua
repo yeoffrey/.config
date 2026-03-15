@@ -1,3 +1,6 @@
+require("plugins.ai")
+require("plugins.formatting")
+require("plugins.lspconfig")
 require("plugins.snacks")
 require("plugins.tokyonight")
 require("plugins.whichkey")

@@ -8,6 +8,10 @@
       "rev": "d9b075439bc4d3714ba93c94b5036c7c9d3ee9c7",
       "src": "https://github.com/saghen/blink.cmp"
     },
+    "conform.nvim": {
+      "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "efmls-configs-nvim": {
       "rev": "0b0ca5462a0a9c1233cc8359e64741d7d49fbbe4",
       "src": "https://github.com/creativenull/efmls-configs-nvim"
@@ -51,6 +55,10 @@
     "nvim-web-devicons": {
       "rev": "d7462543c9e366c0d196c7f67a945eaaf5d99414",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "opencode.nvim": {
+      "rev": "8804ffb81f9784dcd0e9af43a2068fb55282c4dd",
+      "src": "https://github.com/nickjvandyke/opencode.nvim"
     },
     "plenary.nvim": {
       "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",

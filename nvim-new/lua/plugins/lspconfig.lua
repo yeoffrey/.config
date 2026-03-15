@@ -1,1 +1,1 @@
-vim.pack.add({"https://github.com/neovim/nvim-lspconfig/tree/master"})
+vim.pack.add({"https://github.com/neovim/nvim-lspconfig"})
