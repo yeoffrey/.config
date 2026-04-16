@@ -1,6 +1,10 @@
 vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" })
 
-require("nvim-treesitter").install({
+local ts = require("nvim-treesitter")
+
+ts.setup()
+
+ts.install({
   "html",
   "javascript",
   "jsdoc",
@@ -11,7 +15,6 @@ require("nvim-treesitter").install({
   "markdown",
   "markdown_inline",
   "lua",
-  "query",
   "regex",
   "toml",
   "tsx",
@@ -22,6 +25,7 @@ require("nvim-treesitter").install({
   "yaml",
 })
 
+-- Highlighting
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "<filetype>" },
   callback = function()
@@ -41,5 +45,6 @@ vim.api.nvim_create_autocmd("PackChanged", {
   end,
 })
 
+-- Folds
 vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.wo[0][0].foldmethod = "expr"
