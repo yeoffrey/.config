@@ -1,7 +1,0 @@
-- Configure LSPs and Formatters through Mason, this will be much nicer.
-- ctrl + hjkl for navigating between panes
-
-Plugins I'd like to add explore:
-- Gitsigns
-- nvim-cmp for autocompletion
-- Copilot
