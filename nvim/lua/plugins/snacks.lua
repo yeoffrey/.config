@@ -13,16 +13,12 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
+  ---@type snacks.Config
   opts = {
     dashboard = {
       enabled = true,
       preset = {
         header = random_header(),
-      },
-      formats = {
-        header = {
-          align = "center",
-        },
       },
       sections = {
         {
@@ -31,6 +27,13 @@ return {
         },
         { section = "keys", padding = 2 },
         { section = "startup" },
+      },
+    },
+    picker = {
+      sources = {
+        files = { hidden = true },
+        grep = { hidden = true },
+        explorer = { hidden = true },
       },
     },
   },

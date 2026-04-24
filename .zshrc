@@ -36,6 +36,7 @@ alias cd="z"
 alias ls="eza --icons=always"
 
 alias v="nvim"
+alias t="tmux --kill-server; tmux"
 
 # Node 22
 export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
