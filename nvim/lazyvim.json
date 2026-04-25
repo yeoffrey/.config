@@ -8,8 +8,8 @@
     "lazyvim.plugins.extras.lang.prisma",
     "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.typescript.biome",
-    "lazyvim.plugins.extras.lang.typescript.oxc",
     "lazyvim.plugins.extras.lang.typescript.tsgo",
     "lazyvim.plugins.extras.lang.yaml",
     "lazyvim.plugins.extras.util.dot"
@@ -20,3 +20,4 @@
   },
   "version": 8
 }
+
