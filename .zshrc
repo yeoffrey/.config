@@ -15,9 +15,9 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias cd="z"
 alias ls="eza --icons=always"
 alias v="nvim"
-alias t="tmux --kill-server; tmux"
-
+alias t="tmux kill-server 2>/dev/null; tmux new-session -c ~/tailwind"
 alias e="exit"
+alias c="clear"
 
 # History
 HISTFILE=$HOME/.zhistory
