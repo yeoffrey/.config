@@ -4,7 +4,10 @@ direnv
 op
 github-copilot
 git
+jgit
 
 .DS_Store
 gcloud
 nvim/lazy-lock.json
+temporalio
+tcld
