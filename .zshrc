@@ -18,6 +18,7 @@ alias v="nvim"
 alias t="tmux kill-server 2>/dev/null; tmux new-session -c ~/tailwind"
 alias e="exit"
 alias c="clear"
+alias o=". ~/tailwind/cloudflare-login.sh && opencode"
 
 # History
 HISTFILE=$HOME/.zhistory
