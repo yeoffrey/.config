@@ -1,4 +1,4 @@
-local cmd = "pi"
+local cmd = ". ~/tailwind/cloudflare-login.sh && clear && pi"
 local reload_timer ---@type uv.uv_timer_t?
 
 local function stop_buffer_reload()
