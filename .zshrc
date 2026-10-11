@@ -18,6 +18,8 @@ alias v="nvim"
 alias t="tmux kill-server 2>/dev/null; tmux new-session -c ~/tailwind"
 alias e="exit"
 alias c="clear"
+alias o=". ~/tailwind/cloudflare-login.sh && opencode"
+alias p=". ~/tailwind/cloudflare-login.sh && pi"
 
 # History
 HISTFILE=$HOME/.zhistory
@@ -34,6 +36,8 @@ export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=/opt/homebrew/opt/libpq/bin:$PATH
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
